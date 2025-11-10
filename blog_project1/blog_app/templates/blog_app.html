@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{post.title | title}}</h1>
+    <p>BY {{post.author | upper}}</p>
+    <!-- There should be no gap between date and : -->
+    <p>Published on: {{post.pub_date | date:"F d, Y"}}</p>
+    <p>{{post.content | truncatewords:20}}</p>
+    <p>Words count: {{post.content | wordcount}}</p>
+</body>
+</html>

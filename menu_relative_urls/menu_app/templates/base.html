@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            Homeee
+        {% endblock %}
+    </title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background-color: #4954d1; color: white; padding: 1rem; }
+        nav { background-color: #f3f3f3; padding: 0.5rem; }
+        nav a { margin-right: 1rem; text-decoration: none; color: #333; }
+        main { padding: 1rem; }
+        footer { background-color: #ac83ee; color: white; text-align: center; padding: 1rem; }
+        </style>
+</head>
+<body>
+    <header>
+        {% block header %}
+            <h1>My Site</h1>
+        {% endblock %}
+    </header>
+    <nav>
+        {% block nav %}
+        <a href="/home/">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        {% endblock %}
+    </nav>
+    <main>
+        {% block content %}
+          
+        {% endblock %}
+    </main>
+    <footer>
+        {% block footer  %}
+            &copy; 2025 My Site. All rights reserved.
+        {% endblock %}
+    </footer>
+    
+</body>
+</html>

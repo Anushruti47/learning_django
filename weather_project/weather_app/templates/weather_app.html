@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .icon{
+            font-size: 60px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <h1>Today's Weather</h1>
+    {% if condition == 'sunny' %}
+        <p class="icon">☀️</p>
+        <p>It's a bright and sunny day!</p>
+    {% elif condition == 'rainy' %}
+        <p class="icon">🌧️</p>
+        <p>Don't forget your umbrella. It's raining!</p>
+    {% elif condition == 'cloudy' %}
+        <p class="icon">☁️</p>
+        <p>Clouds are out. Might rain later </p>
+    {% elif condition == '' %}
+        <p class="icon">🌧️</p>
+        <p>Don't forget your umbrella. It's raining!</p>
+    {% elif condition == 'snowy' %}
+        <p class="icon">❄️</p>
+        <p>Bundle up! It's snowing outside.</p>
+    {% else %}
+        <p class="icon">🌡</p>
+        <p>Weather data is unavaible.</p>
+    {% endif %}
+
+    <h1>Temperature: {{temperature}} °C</h1>
+    {% if temperature <= 0 %}
+    <p>Warning: Freezing temperatures! Wear heavy layers.</p>
+    {% elif temperature <= 15 %}
+    <p>It's a bit chilly. Consider a jacket.</p>
+    {% elif temperature <= 25 %}
+    <p>The weather is pleasant. Light clothing is fine.</p>
+    {% else %}
+    <p>It's hot outside! Stay hydrated and wear sunsreen.</p>
+    {% endif %}
+</body>
+</html>

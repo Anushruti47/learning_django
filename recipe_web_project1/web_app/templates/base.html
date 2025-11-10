@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>{% block title %}My Recipe Site{% endblock %}</title>
+     <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background-color: #e67e22; color: white; padding: 1rem; }
+        nav { background-color: #f3f3f3; padding: 0.5rem; }
+        nav a { margin-right: 1rem; text-decoration: none; color: #333; }
+        main { padding: 1rem; }
+        footer { background-color: #e67e22; color: white; text-align: center; padding: 1rem; }
+        </style>
+</head>
+<body>
+    <header>
+        <h1>{% block header %}My Recipe Site{% endblock %}</h1>
+    </header>
+    <nav>
+        {% block navigation%}
+            <a href="/">Home</a>
+            <a href="#">Submit Recipe</a>
+            <a href="#">Contact</a>
+        {% endblock %}
+    </nav>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+    <footer>
+        {% block footer %}
+            &copy; 2025 My Recipe Site. All rights reserved.
+        {% endblock%}
+    </footer>
+</body>
+</html>
