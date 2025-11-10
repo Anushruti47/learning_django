@@ -1,0 +1,45 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        Home
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+    <header>
+        {% block header%}
+
+        {% endblock %}
+    </header>
+    <nav></nav>
+    <main>
+{% block content %}
+    <div class="profile-card">
+        
+        <!--Add the image 'profile.png' here-->
+        <img src="{% static 'images/profile1.jpg' %}" alt="profile pic" width="250px" height="250px">
+
+        <h1>{{ name }}</h1>
+        <p>{{ bio }}</p>
+
+        <h3>Interests:</h3>
+        <ul>
+            {% for interest in interests %}
+                <li>{{ interest }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+    </main>
+    <footer></footer>
+    
+</body>
+</html>
+       

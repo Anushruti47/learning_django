@@ -1,0 +1,19 @@
+.profile-card {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+.profile-card img{
+    border-radius: 100%;
+}
+.profile-card h1 {
+    color: #4CAF50;
+}
+
+.profile-card ul {
+    list-style-type: square;
+}
