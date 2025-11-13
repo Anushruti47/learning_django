@@ -13,12 +13,12 @@ class Book (models.Model):
 # python manage.py shell
 # from book_app.models import Book
 
-# new_book = Book(
-#     title="Django for Beginners",
-#     author="William S. Vincent",
-#     publication_year=2020,
-#     isbn="9781735467207"
-# )
+new_book = Book(
+    title="Django for Beginners",
+    author="William S. Vincent",
+    publication_year=2020,
+    isbn="9781735467207"
+)
 # new_book.save()
 # Book.objects.all()
 
