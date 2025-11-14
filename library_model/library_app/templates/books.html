@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Library Management System</h1>
+    <h2>Newly Added Book:</h2>
+    <p>Title:{{new_book.title}}</p>
+    <p>Author:{{new_book.author}}</p>
+    <p>Publicaiton Year:{{new_book.publication_year}}</p>
+    <p>ISBN:{{new_book.isbn}}</p>
+
+    <h2>All Books</h2>
+    <ul>
+        {% for book in all_books %}
+            <li>
+                {{new_book.title}} by {{new_book.author}}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

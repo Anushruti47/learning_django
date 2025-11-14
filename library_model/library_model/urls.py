@@ -17,7 +17,11 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from library_app import views
 
 urlpatterns = [
+    path("",views.home,name="home"),
+    path("home/",views.home,name="home"),
+    path("add-book/",views.add_book,name="add_book"),
     path("admin/", admin.site.urls),
 ]
