@@ -1,0 +1,15 @@
+<h1>Movie Collection Manager</h1>
+<h2>Newly Added Movie:</h2>
+<p>Title:{{new_movie.title}}</p>
+<p>Director:{{new_movie.director}}</p>
+<p>Release year:{{new_movie.release_year}}</p>
+<p>IMDB ID:{{new_movie.imdb_id}}</p>
+
+<h2>All Movies:</h2>
+<ul>
+    {% for movie in all_movies %}
+        <li>
+            {{movie.title}} - Directed by {{movie.director}}
+        </li>
+    {% endfor %}
+</ul>
