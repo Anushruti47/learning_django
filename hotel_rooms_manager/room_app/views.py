@@ -18,11 +18,11 @@ def room_list(request):
     
     all_rooms=Room.objects.all()
 
-    available_rooms=Room.objects.all().filter(is_available=True)
+    available_rooms=Room.objects.filter(is_available=True)
 
-    rooms_by_price=Room.objects.all().order_by('price_per_night')
+    rooms_by_price=Room.objects.all().order_by('price_per_night')[:3]
 
-    suite_rooms=Room.objects.all().filter(room_type="Suite")
+    suite_rooms=Room.objects.filter(room_type="Suite")
 
     context={
         'all_rooms':all_rooms,
