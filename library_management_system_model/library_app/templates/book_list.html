@@ -1,0 +1,41 @@
+<h1>📔Book Library🔖</h1>
+<h2>All Books:</h2>
+<ul>
+    {% for book in all_books %}
+    <li>
+        {{book.title}} by {{book.author}}
+    </li>
+    {% endfor %}
+</ul>
+
+<h2>Fiction Books:</h2>
+<ul>
+    {% for book in fiction_books %}
+    <li>
+        {{book.title}} by {{book.author}}
+    </li>
+    {% endfor %}
+</ul>
+
+<h2>First Book(ID=1):</h2>
+<p>
+    {{first_book.title}} by {{first_book.author}}
+</p>
+
+<h2>Books ordered by title:</h2>
+<ul>
+    {% for book in books_by_title %}
+    <li>
+        {{book.title}} by {{book.author}}
+    </li>
+    {% endfor %}
+</ul>
+
+<h2>First 5 books:</h2>
+<ul>
+    {% for book in first_5_books %}
+    <li>
+        {{book.title}} by {{book.author}}
+    </li>
+    {% endfor %}
+</ul>
