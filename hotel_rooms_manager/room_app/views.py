@@ -22,7 +22,7 @@ def room_list(request):
 
     rooms_by_price=Room.objects.all().order_by('price_per_night')
 
-    suite_rooms=Room.objects.all().filter(room_type="suite")
+    suite_rooms=Room.objects.all().filter(room_type="Suite")
 
     context={
         'all_rooms':all_rooms,
