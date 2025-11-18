@@ -17,7 +17,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from task_app import views
 
 urlpatterns = [
+    path("",views.home,name="home"),
+    path("home/",views.home,name="home"),
+    path("tasks/",views.tasks,name="tasks"),
+    path("deletion-completed/",views.delete_completed_tasks,name="delete_completed_tasks"),
     path("admin/", admin.site.urls),
 ]
