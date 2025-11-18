@@ -1,0 +1,9 @@
+<h1>To-Do List</h1>
+<ul>
+    {% for task in tasks %}
+    <li>{{task.title}} - {% if task.completed %}Completed{% else %}Pending{% endif %} </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'delete_completed_tasks' %}">
+    <button>Delete completed tasks</button>
+</a>
