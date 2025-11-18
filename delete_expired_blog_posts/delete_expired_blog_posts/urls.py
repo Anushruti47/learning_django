@@ -1,5 +1,5 @@
 """
-URL configuration for delete_completedTasks_toDoList2 project.
+URL configuration for delete_expired_blog_posts project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -17,12 +17,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from task_app import views
 
 urlpatterns = [
-    path("",views.home,name="home"),
-    path("home/",views.home,name="home"),
-    path("tasks/",views.tasks,name="tasks"),
-    path("deletion-completed/",views.delete_completed_tasks,name="delete_completed_tasks"),
-    # path("admin/", admin.site.urls),
+    path("admin/", admin.site.urls),
 ]
