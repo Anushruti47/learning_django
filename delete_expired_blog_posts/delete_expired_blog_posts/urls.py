@@ -17,7 +17,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from blog_app import views
 
 urlpatterns = [
+    path("",views.home,name="home"),
+    path("home/",views.home,name="home"),
+    path("posts/",views.blog_list,name="blog_list"),
+    path("posts-afterDeletion/",views.delete_expired_posts,name="delete_expired_posts"),
     path("admin/", admin.site.urls),
 ]

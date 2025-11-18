@@ -1,0 +1,12 @@
+<h1>All Blog Posts</h1>
+<ul>
+    {% for post in posts %}
+    <li>
+        <strong>{{post.title}}</strong> - Expires on: {{post.expiration_date}}
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'delete_expired_posts' %}">
+    <button>Delete Expired Posts</button>
+</a>
+<p><a href="{% url 'home' %}">Back to Home</a></p>
