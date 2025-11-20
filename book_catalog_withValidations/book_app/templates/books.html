@@ -1,0 +1,17 @@
+<h1>Book Catalog</h1>
+
+<h2>Status</h2>
+<ul>
+  {% for msg in messages %}
+    <li>{{ msg }}</li>
+  {% endfor %}
+</ul>
+
+<h2>Valid Books</h2>
+<ul>
+  {% for book in books %}
+    <li>{{ book.title }} - {{ book.author }} ({{ book.genre }})</li>
+  {% empty %}
+    <li>No books found.</li>
+  {% endfor %}
+</ul>
