@@ -8,6 +8,7 @@ class Student(models.Model):
         ('CS','Computer Science'),
         ('EE','Electrical Engineering'),
         ('ME','Mechanical Engineering'),
+        ('CE','Civil Engineering')
     ]
 
     name=models.CharField(blank=False,max_length=100)
@@ -18,4 +19,4 @@ class Student(models.Model):
     profile_url=models.URLField(blank=True)
 
     def __str__(self):
-        return self.name
+        return f"{self.name} ({self.roll_number})"

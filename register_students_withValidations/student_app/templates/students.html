@@ -1,0 +1,18 @@
+<h1>Student List</h1>
+<ul>
+    {% for msg in messages %}
+    <li>
+        {{msg}}
+    </li>
+    {% endfor %}
+</ul>
+<hr>
+<ul>
+    {% for student in students %}
+    <li>
+        {{student.name}} ({{student.roll_number}}) - {{student.course}} 
+    </li>
+    {% empty %}
+        <p>No students found</p>
+    {% endfor %}
+</ul>
