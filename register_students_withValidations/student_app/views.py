@@ -18,7 +18,7 @@ def student_list(request):
     for data in sample_data:
         try:
             student=Student(**data)
-            student.full_clean()
+            student.full_clean() #Run for validations
             student.save()
             messages.append(f"✅ Added {student.name}")
 
