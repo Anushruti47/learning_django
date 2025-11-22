@@ -1,0 +1,17 @@
+<h1>Student-list</h1>
+<h2>Status</h2>
+<ul>
+    {% for msg in messages %}
+    <li>
+        {{msg}}
+    </li>
+    {% endfor %}
+</ul>
+<hr>
+<ul>
+    {% for student in students %}
+        <li>
+            {{student.name}} ({{student.roll_number}}) - {{student.course}}
+        </li>
+    {% endfor %}
+</ul>
