@@ -1,0 +1,12 @@
+<h1>📖All Books</h1>
+<ul>
+    {% for book in books %}
+    <li>
+        <strong>
+            {{book.title}}
+        </strong>
+        by {{book.author.name}} ({{book.publication_date}}) - ISBN: {{book.isbn}}
+    </li>
+    {% endfor %}
+</ul>
+<a href="/">Back to home</a>
