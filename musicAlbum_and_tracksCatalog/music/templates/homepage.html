@@ -1,0 +1,17 @@
+<h1>🎵 Music Catalog</h1>
+<h2>Albums</h2>
+<ul>
+    {% for album in albums %}
+        <li>
+            <strong>{{album.title}}</strong> by {{album.artist}} ({{album.release_date}})
+        </li>
+    {% endfor %}
+</ul>
+<h2>Tracks</h2>
+<ul>
+    {% for track in tracks %}
+        <li>
+            <strong>{{track.title}}</strong> by <i>{{track.album.title}}</i> ({{track.duration}})
+        </li>
+    {% endfor %}
+</ul>
