@@ -3,7 +3,7 @@ from .models import Album,Track
 from datetime import timedelta
 
 # Create your views here.
-def populate_data(request):
+def populate_data():
     if Album.objects.exists():
         return
 
@@ -17,7 +17,7 @@ def populate_data(request):
 
 def homepage(request):
 
-    populate_data(request)
+    populate_data()
 
     albums=Album.objects.all()
     tracks=Track.objects.select_related("album").all()
