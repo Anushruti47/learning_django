@@ -1,0 +1,31 @@
+from django.shortcuts import render
+from .models import Recipe, Ingredient
+
+def homepage(request):
+    # Create ingredients
+    sugar = Ingredient.objects.get_or_create(name="Sugar")[0]
+    flour = Ingredient.objects.get_or_create(name="Flour")[0]
+    butter = Ingredient.objects.get_or_create(name="Butter")[0]
+    salt = Ingredient.objects.get_or_create(name="Salt")[0]
+    # get_or_create() returns (object, created). [0] gives the object; 
+    # created is True if a new one was made, False if it already existed.
+
+    # Create recipe
+    cake = Recipe.objects.get_or_create(name="Cake")[0]
+
+    # Add ingredients to the recipe
+    cake.ingredients.add(sugar, flour, butter)
+
+    # Remove one ingredient
+    cake.ingredients.remove(salt)  # This won't throw error even if not present
+
+    # Replace all ingredients with new ones
+    cake.ingredients.set([sugar, salt])  # Now only Sugar and Salt are in Cake
+
+    # Clear all ingredients from the recipe
+    cake.ingredients.clear()
+
+    # Add final list
+    cake.ingredients.add(flour, butter)
+
+    return render(request, "homepage.html", {"recipe": cake})
