@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Recipes and their Ingredients</h1>
+    <ul>
+    {% for recipe in recipes %}
+        <li>
+            <strong>{{recipe.name}}</strong> and their ingredients:
+            <ul>
+            {% for ingredient in recipe.ingredients.all %}
+            <li>
+                {{ingredient.name}}
+            </li>
+            {% empty %}
+            <li>No ingredients available</li>
+            {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
