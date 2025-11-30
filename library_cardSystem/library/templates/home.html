@@ -1,1 +1,8 @@
-<h1></h1>
+<h1>Library Patrons and their Cards</h1>
+<ul>
+    {% for patron in patrons %}
+    <li>
+        {{patron.name}} ({{patron.email}}) - Card Number: {{patron.librarycard.card_number}}, Issued on: {{patron.librarycard.issue_date}}
+    </li>
+    {% endfor %}
+</ul>
