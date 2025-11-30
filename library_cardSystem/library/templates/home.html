@@ -2,7 +2,7 @@
 <ul>
     {% for patron in patrons %}
     <li>
-        {{patron.name}} ({{patron.email}}) - Card Number: {{patron.librarycard.card_number}}, Issued on: {{patron.librarycard.issue_date}}
+        <strong>{{patron.name}}</strong> ({{patron.email}}) - Card Number: {{patron.librarycard.card_number}}, Issued on: {{patron.librarycard.issue_date}}
     </li>
     {% endfor %}
 </ul>
