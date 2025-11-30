@@ -1,0 +1,34 @@
+
+    # Clear previous data
+    Student.objects.all().delete()
+    Course.objects.all().delete()
+
+    # Create students
+    alice = Student.objects.create(name="Alice")
+    bob   = Student.objects.create(name="Bob")
+    carol = Student.objects.create(name="Carol")
+
+    # Create courses
+    python = Course.objects.create(name="Python Programming")
+    web = Course.objects.create(name="Web Development")
+
+    # Enroll Alice and Bob in Python
+    python.students.add(alice, bob)
+
+    # Enroll Alice in Web
+    web.students.add(alice)
+
+    # Show remove()
+    python.students.remove(bob)  # Bob no longer in Python
+
+    # Show clear()
+    web.students.clear()  # All students removed from Web
+
+    # Show set()
+    web.students.set([carol])  # Only Carol enrolled in Web now
+
+    context = {
+        "students": Student.objects.all(),
+        "courses": Course.objects.all(),
+    }
+    return render(request, "home.html", context)
