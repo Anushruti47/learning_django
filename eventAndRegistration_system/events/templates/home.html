@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Events and Registrations</h1>
+    {% for event in events %}
+    <h2>{{event.name}}</h2>
+    <p>Description: {{event.description}}</p>
+    <p>Fee: {{event.fee}}</p>
+    <p>Mode: {% if event.is_online %}Online{% else %}Offline{% endif %}</p>
+        <h3>Registrations:</h3>
+        <ul>
+        {% for reg in event.registrations.all %}
+            <li>
+                Name: {{ reg.participant_name }} <br>
+                Email: {{ reg.participant_email }} <br>
+                Tickets: {{ reg.number_of_tickets }} <br>
+                Registered At: {{ reg.registered_at }}
+            </li>
+        {% empty %}
+            <li>No registrations yet.</li>
+        {% endfor %}
+        </ul>
+    <hr>
+    {% endfor %}
+</body>
+</html>
