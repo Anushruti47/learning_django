@@ -35,7 +35,7 @@ def home(request):
     web.students.set([carol])
     web.students.remove(carol)
 
-    # Access alll students and courses
+    # Access all students and courses
     students=Student.objects.all()
     courses=Course.objects.all()
 
