@@ -8,8 +8,9 @@
 <body>
     <header>
     {% block header %}
-    
+        <h1>My Site</h1>
     {% endblock %}
+
     </header>
     <main>
         {% block main %}
@@ -17,9 +18,9 @@
         {% endblock %}
     </main>
     <footer>
-        {% block footer %}
-
-        {% endblock %}
+    {% block footer %}
+        &copy; My Awesome Site
+    {% endblock %}
     </footer>
 </body>
 </html>
