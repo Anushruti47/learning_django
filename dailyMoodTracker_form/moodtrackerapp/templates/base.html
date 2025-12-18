@@ -8,9 +8,14 @@
 <body>
     <header>
         {% block header %}
-
+            <h1>Mood Tracker</h1>
         {% endblock %}
     </header>
+    <nav>
+        <a href="{% url 'homepage' %}">Home</a> |
+        <a href="{% url 'track_mood' %}">Track Mood</a>
+        <hr>
+    </nav>
     <main>
         {% block main %}
 
@@ -18,7 +23,7 @@
     </main>
     <footer>
         {% block footer %}
-
+        
         {% endblock %}
     </footer>
 </body>

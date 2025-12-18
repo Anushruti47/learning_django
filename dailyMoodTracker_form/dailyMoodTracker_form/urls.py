@@ -16,8 +16,11 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
+# from moodtrackerapp import views
 
 urlpatterns = [
+    path("",include("moodtrackerapp.urls")),
+    # path("",views.track_mood,name="track_mood"),
     path("admin/", admin.site.urls),
 ]
