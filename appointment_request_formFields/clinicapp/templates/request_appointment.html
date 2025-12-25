@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Request an Appointment</h1>
+    {% csrf_token %}
+    <form method="post" action="">
+        {{form.as_p}}
+        <!-- {{form.as_ul}} and {{form.as_table}} -->
+        <button type="submit">Request an Appointment</button>
+    </form>
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>
