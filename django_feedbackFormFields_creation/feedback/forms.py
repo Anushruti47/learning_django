@@ -6,7 +6,6 @@ class FeedbackForm(forms.Form):
         ('bug', 'Bug Report'),
         ('suggestion', 'Suggestion'),
     ]
-
     name = forms.CharField(label='Your Full Name', max_length=100)
     email = forms.EmailField(label='Your Email Address')
     rating = forms.IntegerField(

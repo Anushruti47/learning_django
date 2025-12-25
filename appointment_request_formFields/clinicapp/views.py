@@ -7,7 +7,7 @@ def homepage(request):
     return render(request,"homepage.html")
 
 @csrf_exempt
-def request_appoinment(request):
+def request_appointment(request):
     form=AppointmentForm()
     context={
         'form':form,
