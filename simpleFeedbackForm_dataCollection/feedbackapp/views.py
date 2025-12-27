@@ -11,12 +11,11 @@ def submit_feedback_form(request):
         if form.is_valid():
             name=form.cleaned_data.get('name','Anonymous')
             message=form.cleaned_data.get('message','No message provided')
-    
         context={
             'name':name,
             'message':message
         }
-        return render(request,"feedback_confirmation_form",context)
+        return render(request,"feedback_confirmation_form.html",context)
     else:
         form=FeedbackForm()
     return render(request,"submit_feedback_form.html",{'form':form})
