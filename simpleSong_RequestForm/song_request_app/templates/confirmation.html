@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, {{name}}</h1>
+    <p>We have received your request for the song <strong>"{{song}}"</strong></p>
+    <p>Stay tuned as we  play it  for you.</p>
+    <p><a href="{% url 'song_request_form_view' %}">Submit another song request</a></p>
+</body>
+</html>
