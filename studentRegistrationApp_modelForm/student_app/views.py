@@ -5,6 +5,7 @@ from .forms import StudentForm
 # Create your views here.
 def add_student_view(request):
     if request.method=="POST":
+        # print(request.POST)
         form=StudentForm(request.POST)
         if form.is_valid():
             form.save()
