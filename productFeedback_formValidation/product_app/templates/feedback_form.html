@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Feedback</title>
+</head>
+<body>
+    <h1>Submit Product Feedback</h1>
+    <form method="post" action="{% url 'feedback' %}">
+         {% csrf_token %} 
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
